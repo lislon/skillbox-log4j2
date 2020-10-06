@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- WARN нужен, чтобы logger нам сообщал о проблемах с настройками самого себя. -->
+<configuration status="WARN">
+
+    <!-- В секции ниже мы решаем какие сообщения мы хотим логгировать -->
+    <loggers>
+        <root level="debug">
+            <appender-ref ref="Console" level="debug"/>
+        </root>
+    </loggers>
+
+    <!-- В секции ниже мы определяем куда должны попадать логи и в каком формате -->
+    <appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+    </appenders>
+</configuration>
